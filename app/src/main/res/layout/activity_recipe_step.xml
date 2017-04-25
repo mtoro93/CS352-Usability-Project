@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_height="match_parent"
+    android:layout_width="match_parent">
+
+    <LinearLayout
+        android:orientation="vertical" android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:text="Recipe Name"
+            android:layout_margin="10dp"
+            android:textSize="20dp"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Step #: Directions\n Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras volutpat posuere diam, et congue sapien tincidunt quis. Morbi eget eros porttitor, blandit sem at, molestie nisi."
+            android:layout_margin="5dp"
+            android:textSize="20dp"/>
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_margin="10dp"
+            android:src="@drawable/tacos" />
+    </LinearLayout>
+</ScrollView>
