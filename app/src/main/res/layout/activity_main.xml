@@ -12,8 +12,8 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="CookBook"
-        android:textSize="54dp"
-        android:padding="20dp"
+        android:textSize="54sp"
+        android:paddingTop="20dp"
         android:layout_centerHorizontal="true"
     />
     <ImageView
@@ -23,7 +23,7 @@
         android:layout_below="@+id/app_name"
         android:layout_centerHorizontal="true"
         android:src="@drawable/cake_clipart"
-        android:layout_margin="10dp"
+        android:layout_margin="5dp"
         />
     <Button
         android:id="@+id/button_browse"
@@ -33,7 +33,7 @@
         android:layout_below="@+id/app_picture"
         android:layout_centerHorizontal="true"
         android:onClick="browse"
-        android:layout_margin="5dp"
+        android:layout_margin="4dp"
         />
     <Button
         android:id="@+id/button_write"
@@ -43,7 +43,7 @@
         android:layout_below="@+id/button_browse"
         android:layout_centerHorizontal="true"
         android:onClick="write"
-        android:layout_margin="5dp"
+        android:layout_margin="4dp"
         />
     <Button
         android:id="@+id/button_edit"
@@ -53,7 +53,7 @@
         android:layout_below="@+id/button_write"
         android:layout_centerHorizontal="true"
         android:onClick="edit"
-        android:layout_margin="5dp"
+        android:layout_margin="4dp"
         />
     <Button
         android:id="@+id/button_upload"
@@ -63,7 +63,15 @@
         android:layout_below="@+id/button_edit"
         android:layout_centerHorizontal="true"
         android:onClick="upload"
-        android:layout_margin="5dp"
+        android:layout_margin="4dp"
+        />
+    <Button
+        android:id="@+id/button_list"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="List"
+        android:layout_below="@+id/button_upload"
+        android:layout_centerHorizontal="true"
         />
 
 </RelativeLayout>

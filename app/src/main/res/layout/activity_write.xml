@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_height="match_parent"
-    android:layout_width="match_parent"
->
+    android:layout_width="match_parent">
 <LinearLayout
-android:orientation="vertical" android:layout_width="match_parent"
-android:layout_height="match_parent">
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
 
 <EditText
     android:layout_width="wrap_content"
@@ -17,7 +17,7 @@ android:layout_height="match_parent">
     android:layout_height="wrap_content"
     android:text="Ingredients"
     android:layout_marginLeft="20dp"
-    android:textSize="24dp"
+    android:textSize="24sp"
     />
 <ListView
     android:id="@+id/list_ingredients"
@@ -25,13 +25,30 @@ android:layout_height="match_parent">
     android:layout_height="wrap_content">
 
 </ListView>
-<Button
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_gravity="center_horizontal">
+
+        <Button
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
     android:text="Add Ingredient"
-    android:layout_gravity="center_horizontal"
     android:layout_marginTop="10dp"
-    android:layout_marginBottom="10dp"/>
+    android:layout_marginBottom="10dp" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Remove Ingredient"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"/>
+
+    </LinearLayout>
+
+
 <TextView
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
@@ -44,12 +61,91 @@ android:layout_height="match_parent">
     android:layout_height="wrap_content">
 
 </ListView>
-<Button
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_gravity="center_horizontal">
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Add Step"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Remove Step"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"/>
+
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Categories"
+        android:layout_marginLeft="20dp"
+        android:textSize="24dp"/>
+<RadioGroup
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
-    android:text="Add Step"
-    android:layout_gravity="center_horizontal"
-    android:layout_marginTop="10dp"/>
+    android:layout_marginLeft="5dp">
+
+    <RadioButton
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+        android:text="Category 1"/>
+    <RadioButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Category 2"/>
+    <RadioButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Category 3"/>
+</RadioGroup>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_margin="10dp"
+        android:text="Add New Category"
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Tags"
+        android:layout_marginLeft="20dp"
+        android:textSize="24dp"/>
+
+    <GridView
+        android:id="@+id/tag_grid"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="5dp">
+    </GridView>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_margin="10dp"
+        android:text="Add New Tag"
+        />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_margin="20dp"
+        android:text="Save Recipe"
+        android:onClick="saveRecipe"/>
 
 </LinearLayout>
     </ScrollView>
