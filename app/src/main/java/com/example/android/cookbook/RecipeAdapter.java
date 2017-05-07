@@ -26,15 +26,43 @@ public class RecipeAdapter extends ArrayAdapter<Recipe> {
     public View getView(int position, View convertView, ViewGroup parent)
     {
         View listItemView = convertView;
-        if (listItemView == null)
+        Recipe currentRecipe;
+        TextView nameTextView;
+        switch(parent.getId())
         {
-            listItemView = LayoutInflater.from(getContext()).inflate(R.layout.recipe_list_item, parent, false);
+            case R.id.choose_list:
+                if (listItemView == null)
+                {
+                    listItemView = LayoutInflater.from(getContext()).inflate(R.layout.recipe_list_item, parent, false);
+                }
+
+                currentRecipe = getItem(position);
+
+                nameTextView = (TextView) listItemView.findViewById(R.id.recipe_name);
+                nameTextView.setText(currentRecipe.getRecipeName());
+
+                View checkbox = listItemView.findViewById(R.id.grocery_list_checkbox);
+                checkbox.setVisibility(View.VISIBLE);
+
+                break;
+            default:
+
+                if (listItemView == null)
+                {
+                    listItemView = LayoutInflater.from(getContext()).inflate(R.layout.recipe_list_item, parent, false);
+                }
+
+                currentRecipe = getItem(position);
+
+                nameTextView = (TextView) listItemView.findViewById(R.id.recipe_name);
+                nameTextView.setText(currentRecipe.getRecipeName());
+                break;
         }
 
-        Recipe currentRecipe = getItem(position);
 
-        TextView nameTextView = (TextView) listItemView.findViewById(R.id.recipe_name);
-        nameTextView.setText(currentRecipe.getRecipeName());
+
+
+
 
         return listItemView;
     }

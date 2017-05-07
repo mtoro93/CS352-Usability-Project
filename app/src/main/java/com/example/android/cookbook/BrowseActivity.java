@@ -34,9 +34,9 @@ public class BrowseActivity extends AppCompatActivity implements PopupMenu.OnMen
         recipeListView.setEmptyView(mEmptyStateTextView);
 
         final ArrayList<Recipe> recipes  = new ArrayList<Recipe>();
-        /*recipes.add(new Recipe("Recipe 1"));
+        recipes.add(new Recipe("Recipe 1"));
         recipes.add(new Recipe("Recipe 2"));
-        recipes.add(new Recipe("Recipe 3"));*/
+        recipes.add(new Recipe("Recipe 3"));
 
         mAdapter = new RecipeAdapter(this,recipes);
 
