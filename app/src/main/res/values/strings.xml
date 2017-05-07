@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">CookBook</string>
+    <string name="introduction">Welcome to Cookbook.\nRThere are no recipes currently.\nPlease click the menu icon in the toolbar to begin adding recipes.</string>
 </resources>

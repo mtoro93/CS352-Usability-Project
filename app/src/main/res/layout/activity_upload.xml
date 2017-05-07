@@ -35,7 +35,7 @@
         <Button
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Subimit"
+            android:text="Submit"
             android:layout_gravity="center_horizontal"/>
         <View
             android:layout_width="match_parent"
@@ -63,7 +63,7 @@
         <Button
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Subimit"
+            android:text="Submit"
             android:layout_gravity="center_horizontal"/>
         <View
             android:layout_width="match_parent"
@@ -89,9 +89,10 @@
             android:hint="Type email name here"
             android:layout_margin="5dp"/>
         <Button
+            android:id="@+id/button_submit_email"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Subimit"
+            android:text="Submit"
             android:layout_gravity="center_horizontal"/>
     </LinearLayout>
 </ScrollView>

@@ -32,7 +32,6 @@
         android:text="Browse"
         android:layout_below="@+id/app_picture"
         android:layout_centerHorizontal="true"
-        android:onClick="browse"
         android:layout_margin="4dp"
         />
     <Button
