@@ -4,28 +4,27 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="vertical"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content">
+    android:layout_height="match_parent">
 
-<EditText
-    android:layout_width="wrap_content"
-    android:layout_height="wrap_content"
-    android:hint="Recipe Name"
-    android:imeOptions="actionDone"
-    android:inputType="text"
-    android:layout_margin="20dp"/>
-<TextView
-    android:layout_width="wrap_content"
-    android:layout_height="wrap_content"
-    android:text="Ingredients"
-    android:layout_marginLeft="20dp"
-    android:textSize="24sp"
-    />
-<ListView
-    android:id="@+id/write_list_ingredients"
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content">
-
-</ListView>
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:hint="Recipe 1"
+        android:imeOptions="actionDone"
+        android:inputType="text"
+        android:layout_margin="20dp"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Ingredients"
+        android:layout_marginLeft="20dp"
+        android:textSize="24sp"
+        />
+    <ListView
+        android:id="@+id/edit_list_ingredients"
+        android:layout_width="match_parent"
+        android:layout_height="100dp">
+    </ListView>
 
     <LinearLayout
         android:layout_width="wrap_content"
@@ -34,11 +33,11 @@
         android:layout_gravity="center_horizontal">
 
         <Button
-    android:layout_width="wrap_content"
-    android:layout_height="wrap_content"
-    android:text="Add Ingredient"
-    android:layout_marginTop="10dp"
-    android:layout_marginBottom="10dp" />
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Add Ingredient"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp" />
 
         <Button
             android:layout_width="wrap_content"
@@ -50,18 +49,18 @@
     </LinearLayout>
 
 
-<TextView
-    android:layout_width="wrap_content"
-    android:layout_height="wrap_content"
-    android:text="Directions"
-    android:layout_marginLeft="20dp"
-    android:textSize="24dp"/>
-<ListView
-    android:id="@+id/write_list_directions"
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content">
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Directions"
+        android:layout_marginLeft="20dp"
+        android:textSize="24sp"/>
 
-</ListView>
+    <ListView
+        android:id="@+id/edit_list_directions"
+        android:layout_width="match_parent"
+        android:layout_height="100dp">
+    </ListView>
 
     <LinearLayout
         android:layout_width="wrap_content"
@@ -91,24 +90,25 @@
         android:text="Categories"
         android:layout_marginLeft="20dp"
         android:textSize="24dp"/>
-<RadioGroup
-    android:layout_width="wrap_content"
-    android:layout_height="wrap_content"
-    android:layout_marginLeft="5dp">
+    <RadioGroup
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="5dp">
 
-    <RadioButton
-    android:layout_width="wrap_content"
-    android:layout_height="wrap_content"
-        android:text="Category 1"/>
-    <RadioButton
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Category 2"/>
-    <RadioButton
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Category 3"/>
-</RadioGroup>
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Category 1"
+            android:checked="true"/>
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Category 2"/>
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Category 3"/>
+    </RadioGroup>
 
     <Button
         android:layout_width="wrap_content"
@@ -126,7 +126,7 @@
         android:textSize="24dp"/>
 
     <GridView
-        android:id="@+id/tag_grid"
+        android:id="@+id/edit_tag_grid"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginLeft="5dp">

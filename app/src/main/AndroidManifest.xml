@@ -10,20 +10,15 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity android:name=".MainActivity">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
 
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
         </activity>
 
-        <activity android:name=".BrowseActivity"
-            android:parentActivityName=".MainActivity">
-            <meta-data
-                android:name="android.support.PARENT_ACTIVITY"
-                android:value = ".MainActivity">
+        <activity android:name=".BrowseActivity">
+        <intent-filter>
+            <action android:name="android.intent.action.MAIN" />
 
-            </meta-data>
+            <category android:name="android.intent.category.LAUNCHER" />
+        </intent-filter>
         </activity>
 
         <activity android:name=".WriteActivity"
@@ -51,6 +46,43 @@
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value = ".BrowseActivity">
+
+            </meta-data>
+        </activity>
+
+        <activity android:name=".DisplayActivity"
+            android:parentActivityName=".BrowseActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value = ".BrowseActivity">
+
+            </meta-data>
+        </activity>
+
+        <activity android:name=".RecipeStepActivity"
+            android:parentActivityName=".DisplayActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value = ".DisplayActivity">
+
+            </meta-data>
+        </activity>
+
+        <activity android:name=".GroceryListActivity"
+            android:parentActivityName=".ChooseRecipesActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value = ".ChooseRecipesActivity">
+
+            </meta-data>
+        </activity>
+
+        <activity android:name=".EditActivity"
+            android:parentActivityName=".DisplayActivity"
+            android:windowSoftInputMode="stateAlwaysHidden">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value = ".DisplayActivity">
 
             </meta-data>
         </activity>

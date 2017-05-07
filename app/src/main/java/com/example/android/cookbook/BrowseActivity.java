@@ -23,7 +23,7 @@ public class BrowseActivity extends AppCompatActivity implements PopupMenu.OnMen
     private TextView mEmptyStateTextView;
     private RecipeAdapter mExpandableRecipeAdapter;
     private ArrayList<Recipe> listDataHeader;
-    HashMap<String, ArrayList<Recipe>> listDataChild;
+    private HashMap<String, ArrayList<Recipe>> listDataChild;
 
 
     @Override
@@ -32,13 +32,10 @@ public class BrowseActivity extends AppCompatActivity implements PopupMenu.OnMen
         setContentView(R.layout.activity_browse);
 
 
-        //ListView recipeListView = (ListView) findViewById(R.id.browse_list);
-
-        /*mEmptyStateTextView = (TextView) findViewById(R.id.empty_recipe_view);
-        recipeListView.setEmptyView(mEmptyStateTextView);*/
-
-
         ExpandableListView listView = (ExpandableListView) findViewById(R.id.browse_expandable_list);
+
+        mEmptyStateTextView = (TextView) findViewById(R.id.empty_recipe_view);
+        listView.setEmptyView(mEmptyStateTextView);
 
         prepareListData();
 
@@ -46,6 +43,15 @@ public class BrowseActivity extends AppCompatActivity implements PopupMenu.OnMen
 
         listView.setAdapter(mExpandableRecipeAdapter);
 
+
+        listView.setOnChildClickListener(new ExpandableListView.OnChildClickListener() {
+            @Override
+            public boolean onChildClick(ExpandableListView parent, View v, int groupPosition, int childPosition, long id) {
+                Intent displayActivity = new Intent(BrowseActivity.this, DisplayActivity.class);
+                startActivity(displayActivity);
+                return true;
+            }
+        });
 
     }
 
@@ -64,7 +70,7 @@ public class BrowseActivity extends AppCompatActivity implements PopupMenu.OnMen
         int id = item.getItemId();
         if (id == R.id.action_settings)
         {
-            View browseView = findViewById(R.id.browse_expandable_list);
+            View browseView = findViewById(R.id.browse_search);
             PopupMenu popupMenu = new PopupMenu(this, browseView);
             popupMenu.inflate(R.menu.browse_actions);
             popupMenu.setOnMenuItemClickListener(this);

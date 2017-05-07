@@ -6,6 +6,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseExpandableListAdapter;
+import android.widget.CheckBox;
 import android.widget.TextView;
 
 import java.util.ArrayList;
@@ -41,6 +42,12 @@ public class RecipeAdapter extends BaseExpandableListAdapter {
         {
             LayoutInflater inflater = (LayoutInflater) mContext.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
             convertView = inflater.inflate(R.layout.recipe_list_item, null);
+        }
+
+        if (parent.getId() == R.id.choose_list)
+        {
+            CheckBox checkbox = (CheckBox) convertView.findViewById(R.id.grocery_list_checkbox);
+            checkbox.setVisibility(View.VISIBLE);
         }
 
         TextView recipeName = (TextView) convertView.findViewById(R.id.recipe_name);

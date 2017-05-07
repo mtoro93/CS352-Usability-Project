@@ -23,13 +23,14 @@
             android:queryHint="Search for recipes">
         </android.support.v7.widget.SearchView>
 
-        <ListView
+        <ExpandableListView
             android:id="@+id/choose_list"
             android:layout_width="match_parent"
             android:layout_height="375dp">
-        </ListView>
+        </ExpandableListView>
 
         <Button
+            android:id="@+id/button_create_list"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal"

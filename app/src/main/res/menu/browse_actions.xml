@@ -7,12 +7,12 @@
     <group>
         <item
             android:id="@+id/menu_write"
-            android:title="Write"
+            android:title="Write New Recipe"
             app:showAsAction="always"
             />
         <item
             android:id="@+id/menu_upload"
-            android:title="Upload"
+            android:title="Upload Recipe"
             app:showAsAction="always"
             />
         <item
