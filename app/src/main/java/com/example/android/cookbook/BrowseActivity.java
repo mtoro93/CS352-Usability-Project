@@ -8,10 +8,11 @@ import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
-import android.widget.ListView;
+import android.widget.ExpandableListView;
 import android.widget.TextView;
 
 import java.util.ArrayList;
+import java.util.HashMap;
 
 /**
  * Created by eisat on 4/19/2017.
@@ -20,7 +21,10 @@ import java.util.ArrayList;
 public class BrowseActivity extends AppCompatActivity implements PopupMenu.OnMenuItemClickListener {
 
     private TextView mEmptyStateTextView;
-    private RecipeAdapter mAdapter;
+    private RecipeAdapter mExpandableRecipeAdapter;
+    private ArrayList<Recipe> listDataHeader;
+    HashMap<String, ArrayList<Recipe>> listDataChild;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -28,19 +32,19 @@ public class BrowseActivity extends AppCompatActivity implements PopupMenu.OnMen
         setContentView(R.layout.activity_browse);
 
 
-        ListView recipeListView = (ListView) findViewById(R.id.browse_list);
+        //ListView recipeListView = (ListView) findViewById(R.id.browse_list);
 
-        mEmptyStateTextView = (TextView) findViewById(R.id.empty_recipe_view);
-        recipeListView.setEmptyView(mEmptyStateTextView);
+        /*mEmptyStateTextView = (TextView) findViewById(R.id.empty_recipe_view);
+        recipeListView.setEmptyView(mEmptyStateTextView);*/
 
-        final ArrayList<Recipe> recipes  = new ArrayList<Recipe>();
-        recipes.add(new Recipe("Recipe 1"));
-        recipes.add(new Recipe("Recipe 2"));
-        recipes.add(new Recipe("Recipe 3"));
 
-        mAdapter = new RecipeAdapter(this,recipes);
+        ExpandableListView listView = (ExpandableListView) findViewById(R.id.browse_expandable_list);
 
-        recipeListView.setAdapter(mAdapter);
+        prepareListData();
+
+        mExpandableRecipeAdapter = new RecipeAdapter(this, listDataHeader, listDataChild);
+
+        listView.setAdapter(mExpandableRecipeAdapter);
 
 
     }
@@ -60,7 +64,7 @@ public class BrowseActivity extends AppCompatActivity implements PopupMenu.OnMen
         int id = item.getItemId();
         if (id == R.id.action_settings)
         {
-            View browseView = findViewById(R.id.browse_list);
+            View browseView = findViewById(R.id.browse_expandable_list);
             PopupMenu popupMenu = new PopupMenu(this, browseView);
             popupMenu.inflate(R.menu.browse_actions);
             popupMenu.setOnMenuItemClickListener(this);
@@ -89,5 +93,37 @@ public class BrowseActivity extends AppCompatActivity implements PopupMenu.OnMen
             default:
                 return false;
         }
+    }
+
+    private void prepareListData()
+    {
+        listDataHeader = new ArrayList<Recipe>();
+        listDataChild = new HashMap<String, ArrayList<Recipe>>();
+
+
+        ArrayList<Recipe> categoryOne = new ArrayList<Recipe>();
+        categoryOne.add(new Recipe("Recipe 1", "Category 1"));
+        categoryOne.add(new Recipe("Recipe 2", "Category 1"));
+        categoryOne.add(new Recipe("Recipe 3", "Category 1"));
+
+
+        ArrayList<Recipe> categoryTwo = new ArrayList<Recipe>();
+        categoryTwo.add(new Recipe("Recipe 4", "Category 2"));
+        categoryTwo.add(new Recipe("Recipe 5", "Category 2"));
+        categoryTwo.add(new Recipe("Recipe 6", "Category 2"));
+
+        ArrayList<Recipe> categoryThree = new ArrayList<Recipe>();
+        categoryThree.add(new Recipe("Recipe 7", "Category 3"));
+        categoryThree.add(new Recipe("Recipe 8", "Category 3"));
+        categoryThree.add(new Recipe("Recipe 9", "Category 3"));
+
+        listDataHeader.add(categoryOne.get(0));
+        listDataHeader.add(categoryTwo.get(0));
+        listDataHeader.add(categoryThree.get(0));
+
+        listDataChild.put(listDataHeader.get(0).getCategoryName(), categoryOne);
+        listDataChild.put(listDataHeader.get(1).getCategoryName(), categoryTwo);
+        listDataChild.put(listDataHeader.get(2).getCategoryName(), categoryThree);
+
     }
 }

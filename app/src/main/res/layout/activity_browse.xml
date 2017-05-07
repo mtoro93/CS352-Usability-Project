@@ -11,12 +11,12 @@
         android:layout_height="wrap_content"
         android:queryHint="Search for recipes">
     </android.support.v7.widget.SearchView>
-    <ListView
-        android:id="@+id/browse_list"
+    <ExpandableListView
+        android:id="@+id/browse_expandable_list"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@+id/browse_search">
-    </ListView>
+    </ExpandableListView>
     <TextView
         android:id="@+id/empty_recipe_view"
         android:layout_width="wrap_content"

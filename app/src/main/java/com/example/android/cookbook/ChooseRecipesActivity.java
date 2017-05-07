@@ -4,8 +4,6 @@ import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.widget.ListView;
 
-import java.util.ArrayList;
-
 /**
  * Created by eisat_000 on 5/6/2017.
  */
@@ -22,13 +20,13 @@ public class ChooseRecipesActivity extends AppCompatActivity {
 
 
 
-        final ArrayList<Recipe> recipes  = new ArrayList<Recipe>();
+        /*final ArrayList<Recipe> recipes  = new ArrayList<Recipe>();
         recipes.add(new Recipe("Recipe 1"));
         recipes.add(new Recipe("Recipe 2"));
         recipes.add(new Recipe("Recipe 3"));
 
        RecipeAdapter mAdapter = new RecipeAdapter(this,recipes);
 
-        recipeListView.setAdapter(mAdapter);
+        recipeListView.setAdapter(mAdapter);*/
     }
 }
