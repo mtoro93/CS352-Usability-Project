@@ -27,10 +27,30 @@
         </activity>
 
         <activity android:name=".WriteActivity"
-            android:parentActivityName=".MainActivity">
+            android:windowSoftInputMode="stateAlwaysHidden"
+            android:parentActivityName=".BrowseActivity">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value = ".MainActivity">
+                android:value = ".BrowseActivity">
+
+            </meta-data>
+        </activity>
+
+        <activity android:name=".UploadActivity"
+            android:windowSoftInputMode="stateAlwaysHidden"
+            android:parentActivityName=".BrowseActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value = ".BrowseActivity">
+
+            </meta-data>
+        </activity>
+
+        <activity android:name=".ChooseRecipesActivity"
+            android:parentActivityName=".BrowseActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value = ".BrowseActivity">
 
             </meta-data>
         </activity>
