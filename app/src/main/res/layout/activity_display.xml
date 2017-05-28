@@ -1,23 +1,118 @@
 <?xml version="1.0" encoding="utf-8"?>
-
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    >
 
     <LinearLayout
         xmlns:android="http://schemas.android.com/apk/res/android"
-        android:orientation="vertical" android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Recipe Name"
+            android:text="Chocolate Cake"
             android:textSize="24sp"
             android:layout_gravity="center_horizontal"
             android:paddingTop="10dp"/>
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Category: "
+            android:text="Category: Dessert"
             android:layout_gravity="center_horizontal"/>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@android:color/black"
+            android:layout_margin="10dp">
+        </View>
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:layout_marginLeft="5dp"
+                android:orientation="vertical"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:text="Yield:"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"/>
+
+                <TextView
+                    android:text="Makes two round, 9-inch cakes"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"/>
+
+            </LinearLayout>
+            <View
+                android:layout_width="1dp"
+                android:layout_height="match_parent"
+                android:background="@android:color/black"
+                android:layout_margin="10dp">
+            </View>
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:text="Active Time:"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"/>
+
+                <TextView
+                    android:text="5 minutes"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"/>
+            </LinearLayout>
+
+            <View
+                android:layout_width="1dp"
+                android:layout_height="match_parent"
+                android:background="@android:color/black"
+                android:layout_margin="10dp">
+            </View>
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:text="Total Time:"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"/>
+
+                <TextView
+                    android:text="35 minutes"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"/>
+            </LinearLayout>
+
+        </LinearLayout>
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@android:color/black"
+            android:layout_margin="10dp">
+        </View>
+
         <TextView
             android:id="@+id/ingredients_line"
             android:layout_width="wrap_content"
@@ -28,7 +123,8 @@
         <ListView
             android:id="@+id/display_ingredients"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content">
+            android:layout_height="125dp"
+           >
         </ListView>
         <View
             android:layout_width="match_parent"
@@ -45,8 +141,25 @@
         <ListView
             android:id="@+id/display_directions"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content">
+            android:layout_height="150dp">
         </ListView>
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@android:color/black"
+            android:layout_margin="10dp">
+        </View>
+
+        <TextView
+            android:text="Notes:"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"/>
+        <TextView
+            android:text="You can substitute canola oil for vegetable oil."
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"/>
         <View
             android:layout_width="match_parent"
             android:layout_height="1dp"
@@ -56,8 +169,11 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Tags: tag1, tag2, tag3"
-            android:layout_marginTop="5dp"
-            android:layout_marginLeft="5dp"/>
+            android:text="Tags: dessert, chocolate, cake"
+            android:layout_margin="5dp"/>
     </LinearLayout>
+
+</ScrollView>
+
+
 

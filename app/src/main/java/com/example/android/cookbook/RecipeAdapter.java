@@ -48,10 +48,12 @@ public class RecipeAdapter extends BaseExpandableListAdapter {
         {
             CheckBox checkbox = (CheckBox) convertView.findViewById(R.id.grocery_list_checkbox);
             checkbox.setVisibility(View.VISIBLE);
+
         }
 
         TextView recipeName = (TextView) convertView.findViewById(R.id.recipe_name);
         recipeName.setText(childText);
+
         return convertView;
     }
 

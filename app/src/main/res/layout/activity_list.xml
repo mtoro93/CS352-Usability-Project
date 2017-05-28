@@ -5,34 +5,39 @@
         xmlns:android="http://schemas.android.com/apk/res/android"
         android:orientation="vertical" android:layout_width="match_parent"
         android:layout_height="wrap_content">
-        <TextView
+    <View
+        android:id="@+id/list_menu_placement"
+        android:layout_gravity="right"
+        android:layout_width="1dp"
+        android:layout_height="1dp">
+    </View>
+
+
+
+    <TextView
+            android:id="@+id/list_grocery_header"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Grocery List"
             android:layout_gravity="center_horizontal"
             android:textSize="24sp"
             android:layout_margin="10dp"/>
-        <ListView
+
+    <ExpandableListView
             android:id="@+id/list_grocery"
             android:layout_width="wrap_content"
-            android:layout_height="400dp">
+            android:layout_height="wrap_content">
 
-        </ListView>
+        </ExpandableListView>
 
-        <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:layout_gravity="center_horizontal">
-            <Button
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Save List"/>
-            <Button
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Email List"/>
-        </LinearLayout>
+
+    <TextView
+        android:id="@+id/list_grocery_empty_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:textSize="16sp"
+        android:text="The Grocery List is empty."/>
 
     </LinearLayout>
 

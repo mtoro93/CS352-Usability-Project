@@ -8,97 +8,195 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TextView
+            android:id="@+id/file_upload_header"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="File Upload"
+            android:textSize="20sp"
+            android:layout_centerInParent="true"
+            android:layout_marginTop="15dp"/>
+        <ImageView
+            android:id="@+id/file_upload_info"
+            android:layout_toRightOf="@+id/file_upload_header"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_info_black_24dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginLeft="5dp"/>
+        </RelativeLayout>
+
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Upload"
-            android:textSize="24dp"
-            android:layout_gravity="center_horizontal"
-            android:layout_margin="10dp" />
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="File"
-            android:textSize="20dp"
-            android:layout_margin="5dp"/>
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Directions"
-            android:textSize="20dp"
-            android:layout_margin="5dp"/>
-        <EditText
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:hint="Enter file name here"
-            android:layout_margin="5dp"
-            android:imeOptions="actionDone"
-            android:inputType="text"/>
-        <Button
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Submit"
-            android:layout_gravity="center_horizontal"/>
+            android:text="@string/file_upload_directions"
+            android:textSize="14sp"
+            android:layout_marginLeft="15dp"/>
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <EditText
+                android:id="@+id/file_upload_edit_text"
+                android:layout_width="320dp"
+                android:layout_height="wrap_content"
+                android:hint="Enter file name here"
+                android:layout_marginLeft="15dp"
+                android:imeOptions="actionDone"
+                android:inputType="text"/>
+
+            <ImageButton
+                android:id="@+id/button_submit_file"
+                android:layout_alignParentRight="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_file_upload_black_24dp"
+                android:layout_marginRight="5dp"
+                android:layout_gravity="center_horizontal"
+                android:visibility="visible"/>
+            <ProgressBar
+                android:id="@+id/file_loading_indicator"
+                style="@style/Widget.AppCompat.ProgressBar"
+                android:layout_alignParentRight="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:visibility="gone"/>
+
+        </RelativeLayout>
+
+
+
         <View
             android:layout_width="match_parent"
             android:layout_height="1dp"
             android:background="@android:color/black"
             android:layout_margin="10dp">
         </View>
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <TextView
+                android:id="@+id/url_upload_header"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Internet Upload"
+                android:textSize="20sp"
+                android:layout_centerInParent="true"
+                android:layout_marginTop="10dp"/>
+            <ImageView
+                android:id="@+id/url_upload_info"
+                android:layout_toRightOf="@+id/url_upload_header"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_info_black_24dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginLeft="5dp"/>
+        </RelativeLayout>
+
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Internet"
-            android:textSize="20dp"
-            android:layout_margin="5dp"/>
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Directions"
-            android:textSize="20dp"
-            android:layout_margin="5dp"/>
-        <EditText
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:hint="Enter url here"
-            android:layout_margin="5dp"
-            android:imeOptions="actionDone"
-            android:inputType="text"/>
-        <Button
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Submit"
-            android:layout_gravity="center_horizontal"/>
+            android:text="@string/url_upload_directions"
+            android:textSize="14sp"
+            android:layout_marginLeft="15dp"/>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <EditText
+                android:id="@+id/url_upload_edit_text"
+                android:layout_width="320dp"
+                android:layout_height="wrap_content"
+                android:hint="Enter url here"
+                android:layout_marginLeft="15dp"
+                android:imeOptions="actionDone"
+                android:inputType="text"/>
+
+            <ImageButton
+                android:id="@+id/button_submit_url"
+                android:layout_alignParentRight="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_file_upload_black_24dp"
+                android:layout_marginRight="5dp"
+                android:layout_gravity="center_horizontal"/>
+            <ProgressBar
+                android:id="@+id/url_loading_indicator"
+                style="@style/Widget.AppCompat.ProgressBar"
+                android:layout_alignParentRight="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:visibility="gone"/>
+        </RelativeLayout>
+
+
+
         <View
             android:layout_width="match_parent"
             android:layout_height="1dp"
             android:background="@android:color/black"
             android:layout_margin="10dp">
         </View>
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <TextView
+                android:id="@+id/email_upload_header"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Email Upload"
+                android:textSize="20sp"
+                android:layout_centerInParent="true"
+                android:layout_marginTop="10dp"/>
+            <ImageView
+                android:id="@+id/email_upload_info"
+                android:layout_toRightOf="@+id/email_upload_header"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_info_black_24dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginLeft="5dp"/>
+
+        </RelativeLayout>
+
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Email"
-            android:textSize="20dp"
-            android:layout_margin="5dp"/>
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Directions"
-            android:textSize="20dp"
-            android:layout_margin="5dp"/>
-        <EditText
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:hint="Enter email name here"
-            android:layout_margin="5dp"
-            android:imeOptions="actionDone"
-            android:inputType="text"/>
-        <Button
-            android:id="@+id/button_submit_email"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Submit"
-            android:layout_gravity="center_horizontal"/>
+            android:text="@string/email_upload_directions"
+            android:textSize="14sp"
+            android:layout_marginLeft="15dp"/>
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <EditText
+                android:id="@+id/email_upload_edit_text"
+                android:layout_width="320dp"
+                android:layout_height="wrap_content"
+                android:hint="Enter email subject line here"
+                android:layout_marginLeft="15dp"
+                android:imeOptions="actionDone"
+                android:inputType="text"/>
+
+            <ImageButton
+                android:id="@+id/button_submit_email"
+                android:layout_alignParentRight="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_file_upload_black_24dp"
+                android:layout_marginRight="5dp"
+                android:layout_gravity="center_horizontal"/>
+            <ProgressBar
+                android:id="@+id/email_loading_indicator"
+                style="@style/Widget.AppCompat.ProgressBar"
+                android:layout_alignParentRight="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:visibility="gone"/>
+        </RelativeLayout>
     </LinearLayout>
 </ScrollView>

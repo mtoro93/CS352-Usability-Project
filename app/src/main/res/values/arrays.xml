@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="file_attachments">
+        <item>@string/photo</item>
+        <item>@string/video</item>
+        <item>@string/audio</item>
+    </string-array>
+</resources>

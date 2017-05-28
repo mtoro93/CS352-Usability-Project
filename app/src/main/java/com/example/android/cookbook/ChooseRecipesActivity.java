@@ -59,20 +59,17 @@ public class ChooseRecipesActivity extends AppCompatActivity {
 
 
         ArrayList<Recipe> categoryOne = new ArrayList<Recipe>();
-        categoryOne.add(new Recipe("Recipe 1", "Category 1"));
-        categoryOne.add(new Recipe("Recipe 2", "Category 1"));
-        categoryOne.add(new Recipe("Recipe 3", "Category 1"));
+        categoryOne.add(new Recipe("Chili", "Beef"));
+
 
 
         ArrayList<Recipe> categoryTwo = new ArrayList<Recipe>();
-        categoryTwo.add(new Recipe("Recipe 4", "Category 2"));
-        categoryTwo.add(new Recipe("Recipe 5", "Category 2"));
-        categoryTwo.add(new Recipe("Recipe 6", "Category 2"));
+        categoryTwo.add(new Recipe("Spaghetti with Meatballs", "Pasta"));
+
 
         ArrayList<Recipe> categoryThree = new ArrayList<Recipe>();
-        categoryThree.add(new Recipe("Recipe 7", "Category 3"));
-        categoryThree.add(new Recipe("Recipe 8", "Category 3"));
-        categoryThree.add(new Recipe("Recipe 9", "Category 3"));
+        categoryThree.add(new Recipe("Chocolate Cake", "Dessert"));
+
 
         listDataHeader.add(categoryOne.get(0));
         listDataHeader.add(categoryTwo.get(0));
@@ -83,4 +80,8 @@ public class ChooseRecipesActivity extends AppCompatActivity {
         listDataChild.put(listDataHeader.get(2).getCategoryName(), categoryThree);
 
     }
+
+
+
+
 }

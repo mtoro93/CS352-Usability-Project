@@ -9,9 +9,6 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".MainActivity">
-
-        </activity>
 
         <activity android:name=".BrowseActivity">
         <intent-filter>
@@ -22,6 +19,7 @@
         </activity>
 
         <activity android:name=".WriteActivity"
+            android:label="Write New Recipe"
             android:windowSoftInputMode="stateAlwaysHidden"
             android:parentActivityName=".BrowseActivity">
             <meta-data
@@ -32,6 +30,7 @@
         </activity>
 
         <activity android:name=".UploadActivity"
+            android:label="Upload Recipes"
             android:windowSoftInputMode="stateAlwaysHidden"
             android:parentActivityName=".BrowseActivity">
             <meta-data
@@ -42,6 +41,7 @@
         </activity>
 
         <activity android:name=".ChooseRecipesActivity"
+            android:label="Create Grocery List"
             android:parentActivityName=".BrowseActivity">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
@@ -69,6 +69,7 @@
         </activity>
 
         <activity android:name=".GroceryListActivity"
+            android:label="Grocery List"
             android:parentActivityName=".ChooseRecipesActivity">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
@@ -83,6 +84,38 @@
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value = ".DisplayActivity">
+
+            </meta-data>
+        </activity>
+
+        <activity android:name=".CategoryActivity"
+            android:theme="@style/DialogTheme"
+            android:label="Categories/Tags">
+
+        </activity>
+
+        <activity android:name=".ShareActivity"
+            android:theme="@style/DialogTheme"
+            android:label="Share">
+
+        </activity>
+
+        <activity android:name=".ManageCategoriesActivity"
+            android:label="Manage Categories/Tags"
+            android:parentActivityName=".BrowseActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value = ".BrowseActivity">
+
+            </meta-data>
+        </activity>
+
+        <activity android:name=".HelpActivity"
+            android:label="Help"
+            android:parentActivityName=".BrowseActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value = ".BrowseActivity">
 
             </meta-data>
         </activity>

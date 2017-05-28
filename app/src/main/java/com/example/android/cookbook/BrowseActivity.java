@@ -9,7 +9,7 @@ import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.ExpandableListView;
-import android.widget.TextView;
+import android.widget.Toast;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -20,21 +20,42 @@ import java.util.HashMap;
 
 public class BrowseActivity extends AppCompatActivity implements PopupMenu.OnMenuItemClickListener {
 
-    private TextView mEmptyStateTextView;
+    private View mEmptyStateTextView;
     private RecipeAdapter mExpandableRecipeAdapter;
     private ArrayList<Recipe> listDataHeader;
     private HashMap<String, ArrayList<Recipe>> listDataChild;
-
+    boolean deletedRecipe = false;
+    boolean savedRecipe = false;
+    boolean savedList = false;
+    boolean deletedList = false;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_browse);
 
+        Bundle data = getIntent().getExtras();
+
+        if (data != null)
+        {
+            deletedRecipe = data.getBoolean("delete", false);
+            savedRecipe = data.getBoolean("saved", false);
+            savedList = data.getBoolean("list saved", false);
+            deletedList = data.getBoolean("list deleted", false);
+        }
+
+        if (deletedRecipe)
+            Toast.makeText(this, "Recipe Deleted", Toast.LENGTH_SHORT).show();
+        if (savedRecipe)
+            Toast.makeText(this, "Recipe Saved", Toast.LENGTH_SHORT).show();
+        if (savedList)
+            Toast.makeText(this, "Grocery List Saved", Toast.LENGTH_SHORT).show();
+        if (deletedList)
+            Toast.makeText(this, "Grocery List Deleted", Toast.LENGTH_SHORT).show();
 
         ExpandableListView listView = (ExpandableListView) findViewById(R.id.browse_expandable_list);
 
-        mEmptyStateTextView = (TextView) findViewById(R.id.empty_recipe_view);
+        mEmptyStateTextView =  findViewById(R.id.empty_recipe_view);
         listView.setEmptyView(mEmptyStateTextView);
 
         prepareListData();
@@ -70,7 +91,7 @@ public class BrowseActivity extends AppCompatActivity implements PopupMenu.OnMen
         int id = item.getItemId();
         if (id == R.id.action_settings)
         {
-            View browseView = findViewById(R.id.browse_search);
+            View browseView = findViewById(R.id.menu_placement);
             PopupMenu popupMenu = new PopupMenu(this, browseView);
             popupMenu.inflate(R.menu.browse_actions);
             popupMenu.setOnMenuItemClickListener(this);
@@ -92,9 +113,21 @@ public class BrowseActivity extends AppCompatActivity implements PopupMenu.OnMen
                 Intent uploadIntent = new Intent (BrowseActivity.this, UploadActivity.class);
                 startActivity(uploadIntent);
                 return true;
-            case R.id.menu_grocery_list:
-                Intent groceryListIntent = new Intent (BrowseActivity.this, ChooseRecipesActivity.class);
-                startActivity(groceryListIntent);
+            case R.id.menu_create_grocery_list:
+                Intent createGroceryListIntent = new Intent (BrowseActivity.this, ChooseRecipesActivity.class);
+                startActivity(createGroceryListIntent);
+                return true;
+            case R.id.menu_view_grocery_list:
+                Intent viewGroceryListIntent = new Intent (BrowseActivity.this, GroceryListActivity.class);
+                startActivity(viewGroceryListIntent);
+                return true;
+            case R.id.menu_manage_categories:
+                Intent manageIntent = new Intent(BrowseActivity.this, ManageCategoriesActivity.class);
+                startActivity(manageIntent);
+                return true;
+            case R.id.menu_help:
+                Intent helpIntent = new Intent (BrowseActivity.this, HelpActivity.class);
+                startActivity(helpIntent);
                 return true;
             default:
                 return false;
@@ -108,20 +141,13 @@ public class BrowseActivity extends AppCompatActivity implements PopupMenu.OnMen
 
 
         ArrayList<Recipe> categoryOne = new ArrayList<Recipe>();
-        categoryOne.add(new Recipe("Recipe 1", "Category 1"));
-        categoryOne.add(new Recipe("Recipe 2", "Category 1"));
-        categoryOne.add(new Recipe("Recipe 3", "Category 1"));
-
+        categoryOne.add(new Recipe("Chili", "Beef"));
 
         ArrayList<Recipe> categoryTwo = new ArrayList<Recipe>();
-        categoryTwo.add(new Recipe("Recipe 4", "Category 2"));
-        categoryTwo.add(new Recipe("Recipe 5", "Category 2"));
-        categoryTwo.add(new Recipe("Recipe 6", "Category 2"));
+        categoryTwo.add(new Recipe("Spaghetti with Meatballs", "Pasta"));
 
         ArrayList<Recipe> categoryThree = new ArrayList<Recipe>();
-        categoryThree.add(new Recipe("Recipe 7", "Category 3"));
-        categoryThree.add(new Recipe("Recipe 8", "Category 3"));
-        categoryThree.add(new Recipe("Recipe 9", "Category 3"));
+        categoryThree.add(new Recipe("Chocolate Cake", "Dessert"));
 
         listDataHeader.add(categoryOne.get(0));
         listDataHeader.add(categoryTwo.get(0));
