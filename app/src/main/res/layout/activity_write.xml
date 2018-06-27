@@ -112,13 +112,30 @@
         android:background="@android:color/black"
         android:layout_margin="10dp">
     </View>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
 <TextView
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
     android:text="Ingredients"
     android:layout_marginLeft="20dp"
+    android:layout_marginTop="5dp"
+    android:layout_marginRight="10dp"
     android:textSize="24sp"
     />
+
+        <ImageButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_add_black_24dp"/>
+
+        </LinearLayout>
+
+
 <ListView
     android:id="@+id/write_list_ingredients"
     android:layout_width="match_parent"
@@ -126,27 +143,10 @@
 
 </ListView>
 
-    <LinearLayout
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:layout_gravity="center_horizontal">
 
-        <Button
-    android:layout_width="wrap_content"
-    android:layout_height="wrap_content"
-    android:text="Add Ingredient"
-    android:layout_marginTop="10dp"
-    android:layout_marginBottom="10dp" />
 
-        <Button
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Remove Ingredient"
-            android:layout_marginTop="10dp"
-            android:layout_marginBottom="10dp"/>
 
-    </LinearLayout>
+
     <View
         android:layout_width="match_parent"
         android:layout_height="1dp"
@@ -154,12 +154,26 @@
         android:layout_margin="10dp">
     </View>
 
-<TextView
-    android:layout_width="wrap_content"
-    android:layout_height="wrap_content"
-    android:text="Directions"
-    android:layout_marginLeft="20dp"
-    android:textSize="24dp"/>
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Directions"
+            android:textSize="24dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginRight="10dp"/>
+        <ImageButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_add_black_24dp"/>
+        </LinearLayout>
+
+
 <ListView
     android:id="@+id/write_list_directions"
     android:layout_width="match_parent"
@@ -167,27 +181,8 @@
 
 </ListView>
 
-    <LinearLayout
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:layout_gravity="center_horizontal">
 
-        <Button
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Add Step"
-            android:layout_marginTop="10dp"
-            android:layout_marginBottom="10dp" />
 
-        <Button
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Remove Step"
-            android:layout_marginTop="10dp"
-            android:layout_marginBottom="10dp"/>
-
-    </LinearLayout>
     <View
         android:layout_width="match_parent"
         android:layout_height="1dp"
@@ -204,19 +199,7 @@
         android:layout_height="wrap_content"
         android:layout_marginLeft="5dp"
         android:hint="Additional Notes here"/>
-    <View
-        android:layout_width="match_parent"
-        android:layout_height="1dp"
-        android:background="@android:color/black"
-        android:layout_margin="10dp">
-    </View>
-    <Button
-        android:id="@+id/write_save_recipe"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center_horizontal"
-        android:layout_margin="20dp"
-        android:text="Save Recipe" />
+
 
 </LinearLayout>
 

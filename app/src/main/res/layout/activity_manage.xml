@@ -119,16 +119,17 @@
                 android:src="@drawable/ic_add_black_24dp"/>
 
             <GridView
+                android:layout_marginTop="20dp"
                 android:id="@+id/manage_grid_view"
                 android:layout_below="@+id/manage_tag_header"
-                android:layout_width="wrap_content"
-                android:layout_height="150dp"
-                android:columnWidth="90dp"
-                android:numColumns="auto_fit"
+                android:layout_width="330dp"
+                android:layout_height="200dp"
+                android:columnWidth="100dp"
+                android:numColumns="3"
                 android:verticalSpacing="10dp"
                 android:horizontalSpacing="10dp"
                 android:stretchMode="columnWidth"
-                android:gravity="center">
+                android:layout_centerHorizontal="true">
             </GridView>
             <View
                 android:layout_below="@+id/manage_grid_view"

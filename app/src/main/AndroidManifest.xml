@@ -79,6 +79,7 @@
         </activity>
 
         <activity android:name=".EditActivity"
+            android:label="Edit Recipe"
             android:parentActivityName=".DisplayActivity"
             android:windowSoftInputMode="stateAlwaysHidden">
             <meta-data
@@ -97,6 +98,20 @@
         <activity android:name=".ShareActivity"
             android:theme="@style/DialogTheme"
             android:label="Share">
+
+        </activity>
+
+        
+        <activity android:name=".DialogEditActivity"
+            android:theme="@style/DialogTheme"
+            android:label="Edit">
+
+        </activity>
+
+
+        <activity android:name=".DialogAttachmentActivity"
+            android:theme="@style/DialogTheme"
+            android:label="Add Attachment">
 
         </activity>
 

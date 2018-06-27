@@ -19,6 +19,12 @@
     <string name="audio">Audio</string>
 
 
+    <string name="edit_step">Edit this Direction</string>
+    <string name="delete_step">Delete this Direction</string>
+    <string name="attach_step">Add Attachment</string>
+    <string name="edit_ingredient">Edit this Ingredient</string>
+    <string name="delete_ingredient">Delete this Ingredient</string>
+
     <string name="help">Welcome to CookBook! In this app, you have the power to write new recipes, upload recipes from existing sources, display those recipes, store and organize those recipes, and even make a grocery list from them! Let\'s get started. Press the topic name you are interested in to learn more.</string>
 
     <string name="tutorial_1">Writing New Recipes is a cinch! Starting from the home screen, press the menu icon in the top right corner of the app. Select the "Write New Recipe" option from the drop-down menu. You will now be at a screen where you can begin writing your recipe. Have fun! </string>

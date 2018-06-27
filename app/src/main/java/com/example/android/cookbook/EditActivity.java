@@ -3,10 +3,13 @@ package com.example.android.cookbook;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.view.Menu;
+import android.view.MenuInflater;
+import android.view.MenuItem;
 import android.view.MotionEvent;
 import android.view.View;
-import android.widget.Button;
 import android.widget.ListView;
+import android.widget.Toast;
 
 import java.util.ArrayList;
 
@@ -53,14 +56,17 @@ public class EditActivity extends AppCompatActivity {
         directionListView.setAdapter(directionAdapter);
 
 
-        Button saveRecipe = (Button) findViewById(R.id.edit_save_recipe_button);
-        saveRecipe.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent testIntent = new Intent(EditActivity.this, CategoryActivity.class);
-                startActivity(testIntent);
-            }
-        });
+        Bundle data = getIntent().getExtras();
+        boolean attachment = false;
+        if (data != null)
+        {
+            attachment = data.getBoolean("editAttachment", false);
+        }
+        if (attachment)
+        {
+            Toast.makeText(getBaseContext(), "File Attached", Toast.LENGTH_SHORT).show();
+        }
+
 
         ingredientListView.setOnTouchListener(new ListView.OnTouchListener() {
             @Override
@@ -106,5 +112,27 @@ public class EditActivity extends AppCompatActivity {
             }
         });
 
+
+
+    }
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu)
+    {
+        MenuInflater inflater = getMenuInflater();
+        inflater.inflate(R.menu.edit_write_menu, menu);
+        return true;
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item)
+    {
+        int id = item.getItemId();
+        if (id == R.id.edit_write_save)
+        {
+            Intent testIntent = new Intent(EditActivity.this, CategoryActivity.class);
+            startActivity(testIntent);
+        }
+        return super.onOptionsItemSelected(item);
     }
 }
