@@ -7,14 +7,26 @@ package com.example.android.cookbook;
 public class Recipe {
 
     String mRecipeName;
+    String mCategoryName;
 
-    public Recipe(String recipeName)
+    public Recipe(String recipeName, String categoryName)
     {
         mRecipeName = recipeName;
+        mCategoryName = categoryName;
     }
 
     public String getRecipeName()
     {
         return mRecipeName;
+    }
+
+    public void setCategoryName(String categoryName)
+    {
+        mCategoryName = categoryName;
+    }
+
+    public String getCategoryName()
+    {
+        return mCategoryName;
     }
 }

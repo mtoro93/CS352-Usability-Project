@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="utf-8"?>
+    <LinearLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/manage_category_header"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Category List"
+                android:layout_alignParentTop="true"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="5dp"
+                android:paddingRight="10dp"
+                android:textSize="20sp"/>
+
+            <ImageButton
+                android:layout_toRightOf="@+id/manage_category_header"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_add_black_24dp"/>
+
+            <RelativeLayout
+                android:id="@+id/radio_group_1"
+                android:layout_below="@+id/manage_category_header"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <RadioButton
+                    android:id="@+id/manage_button_1"
+                    android:layout_alignParentLeft="true"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Beef"/>
+                <ImageButton
+                    android:id="@+id/delete_button_1"
+                    android:src="@drawable/ic_delete_forever_black_24dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/radio_group_2"
+                android:layout_below="@+id/radio_group_1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <RadioButton
+                    android:id="@+id/manage_button_2"
+                    android:layout_alignParentLeft="true"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Pasta"/>
+                <ImageButton
+                    android:id="@+id/delete_button_2"
+                    android:src="@drawable/ic_delete_forever_black_24dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/radio_group_3"
+                android:layout_below="@+id/radio_group_2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <RadioButton
+                    android:id="@+id/manage_button_3"
+                    android:layout_alignParentLeft="true"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Dessert"/>
+                <ImageButton
+                    android:id="@+id/delete_button_3"
+                    android:src="@drawable/ic_delete_forever_black_24dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+            </RelativeLayout>
+            <View
+                android:layout_below="@+id/radio_group_3"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@android:color/black"
+                android:layout_margin="10dp">
+            </View>
+        </RelativeLayout>
+
+
+
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/manage_tag_header"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Tag List"
+                android:layout_alignParentTop="true"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="5dp"
+                android:paddingRight="10dp"
+                android:textSize="20sp"/>
+
+            <ImageButton
+                android:layout_toRightOf="@+id/manage_tag_header"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_add_black_24dp"/>
+
+            <GridView
+                android:layout_marginTop="20dp"
+                android:id="@+id/manage_grid_view"
+                android:layout_below="@+id/manage_tag_header"
+                android:layout_width="330dp"
+                android:layout_height="200dp"
+                android:columnWidth="100dp"
+                android:numColumns="3"
+                android:verticalSpacing="10dp"
+                android:horizontalSpacing="10dp"
+                android:stretchMode="columnWidth"
+                android:layout_centerHorizontal="true">
+            </GridView>
+            <View
+                android:layout_below="@+id/manage_grid_view"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@android:color/black"
+                android:layout_margin="10dp">
+            </View>
+        </RelativeLayout>
+
+
+
+    </LinearLayout>
+

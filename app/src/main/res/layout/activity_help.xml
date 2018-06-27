@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    >
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:maxLines="6"
+            android:textSize="16sp"
+            android:text="@string/help"
+            android:layout_margin="10dp"/>
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@android:color/black"
+            android:layout_margin="10dp">
+        </View>
+
+        <TextView
+            android:id="@+id/help_write_new"
+           android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Write New Recipes"
+            android:textSize="20sp"
+            android:layout_margin="10dp"
+            />
+
+        <TextView
+            android:visibility="gone"
+            android:id="@+id/help_write_new_description"
+            android:layout_margin="10dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="16sp"
+            android:text="@string/tutorial_1"
+            />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@android:color/black"
+            android:layout_margin="10dp">
+        </View>
+
+        <TextView
+            android:id="@+id/help_upload"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Upload Recipes"
+            android:textSize="20sp"
+            android:layout_margin="10dp"
+            />
+
+        <TextView
+            android:visibility="gone"
+            android:id="@+id/help_upload_description"
+            android:layout_margin="10dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="16sp"
+            android:text="@string/tutorial_2" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@android:color/black"
+            android:layout_margin="10dp">
+        </View>
+
+        <TextView
+            android:id="@+id/help_display"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Displaying Recipes"
+            android:textSize="20sp"
+            android:layout_margin="10dp"
+            />
+
+        <TextView
+            android:visibility="gone"
+            android:id="@+id/help_display_description"
+            android:layout_margin="10dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="16sp"
+            android:text="@string/tutorial_3" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@android:color/black"
+            android:layout_margin="10dp">
+        </View>
+
+        <TextView
+            android:id="@+id/help_organization"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Organizing Recipes"
+            android:textSize="20sp"
+            android:layout_margin="10dp"
+            />
+
+        <TextView
+            android:visibility="gone"
+            android:id="@+id/help_organization_description"
+            android:layout_margin="10dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="16sp"
+            android:text="@string/tutorial_4" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@android:color/black"
+            android:layout_margin="10dp">
+        </View>
+
+        <TextView
+            android:id="@+id/help_grocery"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Make a Grocery List"
+            android:textSize="20sp"
+            android:layout_margin="10dp"
+            />
+
+        <TextView
+            android:visibility="gone"
+            android:id="@+id/help_grocery_description"
+            android:layout_margin="10dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="16sp"
+            android:text="@string/tutorial_5" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@android:color/black"
+            android:layout_margin="10dp">
+        </View>
+
+    </LinearLayout>
+</ScrollView>

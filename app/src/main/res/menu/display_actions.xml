@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="com.example.android.cookbook.DisplayActivity">
+
+
+    <group>
+        <item
+            android:id="@+id/menu_edit"
+            android:title="Edit this Recipe"
+            app:showAsAction="always"
+            />
+        <item
+            android:id="@+id/menu_share"
+            android:title="Share this Recipe"
+            app:showAsAction="always"
+            />
+        <item
+            android:id="@+id/menu_delete"
+            android:title="Delete this Recipe"
+            app:showAsAction="always"
+            />
+    </group>
+</menu>

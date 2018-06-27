@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="file_attachments">
+        <item>@string/photo</item>
+        <item>@string/video</item>
+        <item>@string/audio</item>
+    </string-array>
+    <string-array name="edit_directions_more_options">
+        <item>@string/edit_step</item>
+        <item>@string/attach_step</item>
+        <item>@string/delete_step</item>
+    </string-array>
+
+    <string-array name="edit_ingredients_more_options">
+        <item>@string/edit_ingredient</item>
+        <item>@string/delete_ingredient</item>
+    </string-array>
+</resources>

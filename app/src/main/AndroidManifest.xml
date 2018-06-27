@@ -9,24 +9,17 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".MainActivity">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
 
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-        </activity>
+        <activity android:name=".BrowseActivity">
+        <intent-filter>
+            <action android:name="android.intent.action.MAIN" />
 
-        <activity android:name=".BrowseActivity"
-            android:parentActivityName=".MainActivity">
-            <meta-data
-                android:name="android.support.PARENT_ACTIVITY"
-                android:value = ".MainActivity">
-
-            </meta-data>
+            <category android:name="android.intent.category.LAUNCHER" />
+        </intent-filter>
         </activity>
 
         <activity android:name=".WriteActivity"
+            android:label="Write New Recipe"
             android:windowSoftInputMode="stateAlwaysHidden"
             android:parentActivityName=".BrowseActivity">
             <meta-data
@@ -37,6 +30,7 @@
         </activity>
 
         <activity android:name=".UploadActivity"
+            android:label="Upload Recipes"
             android:windowSoftInputMode="stateAlwaysHidden"
             android:parentActivityName=".BrowseActivity">
             <meta-data
@@ -47,6 +41,92 @@
         </activity>
 
         <activity android:name=".ChooseRecipesActivity"
+            android:label="Create Grocery List"
+            android:parentActivityName=".BrowseActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value = ".BrowseActivity">
+
+            </meta-data>
+        </activity>
+
+        <activity android:name=".DisplayActivity"
+            android:parentActivityName=".BrowseActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value = ".BrowseActivity">
+
+            </meta-data>
+        </activity>
+
+        <activity android:name=".RecipeStepActivity"
+            android:parentActivityName=".DisplayActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value = ".DisplayActivity">
+
+            </meta-data>
+        </activity>
+
+        <activity android:name=".GroceryListActivity"
+            android:label="Grocery List"
+            android:parentActivityName=".ChooseRecipesActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value = ".ChooseRecipesActivity">
+
+            </meta-data>
+        </activity>
+
+        <activity android:name=".EditActivity"
+            android:label="Edit Recipe"
+            android:parentActivityName=".DisplayActivity"
+            android:windowSoftInputMode="stateAlwaysHidden">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value = ".DisplayActivity">
+
+            </meta-data>
+        </activity>
+
+        <activity android:name=".CategoryActivity"
+            android:theme="@style/DialogTheme"
+            android:label="Categories/Tags">
+
+        </activity>
+
+        <activity android:name=".ShareActivity"
+            android:theme="@style/DialogTheme"
+            android:label="Share">
+
+        </activity>
+
+        
+        <activity android:name=".DialogEditActivity"
+            android:theme="@style/DialogTheme"
+            android:label="Edit">
+
+        </activity>
+
+
+        <activity android:name=".DialogAttachmentActivity"
+            android:theme="@style/DialogTheme"
+            android:label="Add Attachment">
+
+        </activity>
+
+        <activity android:name=".ManageCategoriesActivity"
+            android:label="Manage Categories/Tags"
+            android:parentActivityName=".BrowseActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value = ".BrowseActivity">
+
+            </meta-data>
+        </activity>
+
+        <activity android:name=".HelpActivity"
+            android:label="Help"
             android:parentActivityName=".BrowseActivity">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"

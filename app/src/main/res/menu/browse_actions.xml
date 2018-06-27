@@ -7,19 +7,34 @@
     <group>
         <item
             android:id="@+id/menu_write"
-            android:title="Write"
+            android:title="Write New Recipe"
             app:showAsAction="always"
             />
         <item
             android:id="@+id/menu_upload"
-            android:title="Upload"
+            android:title="Upload Recipe"
             app:showAsAction="always"
             />
         <item
-            android:id="@+id/menu_grocery_list"
+            android:id="@+id/menu_create_grocery_list"
             android:title="Make Grocery List"
             app:showAsAction="always"
             />
+        <item
+            android:id="@+id/menu_view_grocery_list"
+            android:title="View Grocery List"
+            app:showAsAction="always"
+            />
+        <item
+            android:id="@+id/menu_manage_categories"
+            android:title="Manage Categories/Tags"
+            app:showAsAction="always"
+            />
+        <item
+            android:id="@+id/menu_help"
+            android:title="Help"
+            app:showAsAction="always"/>
+
     </group>
 
 </menu>

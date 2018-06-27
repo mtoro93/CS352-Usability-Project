@@ -1,8 +1,4 @@
 <?xml version="1.0" encoding="utf-8"?>
-
-
-
-
 <LinearLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
         android:orientation="vertical"
@@ -23,18 +19,30 @@
             android:queryHint="Search for recipes">
         </android.support.v7.widget.SearchView>
 
-        <ListView
+        <TextView
+            android:id="@+id/choose_empty_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:textSize="14sp"
+            android:text="@string/introduction_two"
+            android:layout_margin="20dp"/>
+
+        <ExpandableListView
             android:id="@+id/choose_list"
             android:layout_width="match_parent"
             android:layout_height="375dp">
-        </ListView>
+        </ExpandableListView>
 
         <Button
+            android:id="@+id/button_create_list"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal"
             android:text="Create List"
             />
+
+
 
     </LinearLayout>
 
